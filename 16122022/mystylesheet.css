@@ -1,0 +1,43 @@
+#container {
+	width:600px;
+	color:#FFF;
+	margin: 0 auto;
+}
+#nav {
+	background-color: grey;
+	padding: 10px;
+}
+#aside {
+	background-color: purple;
+	width:160px;
+	height:300px;
+	text-align: center;
+	line-height: 300px;
+	padding: 20px 10px;
+	float:left;
+}
+#section {
+	background-color: orange;
+	width: 380px;
+	height: 300px;
+	line-height: 300px;
+	padding: 20px;
+	float: left;
+}
+#footer {
+	background-color: pink;
+	text-align: center;
+	padding: 5px;
+	clear:both;
+}
+h1 {
+	color: FFF;
+	text-align: center;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}

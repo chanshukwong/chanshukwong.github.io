@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML 表單應用</title>
+</head>
+<body>
+	<form action="/formprocess.php" method="post">
+
+		<p>Name:<br>
+		<input type="text" name="username" value="Your Name"></p>
+
+		<p>Email:<br>
+		<input type="text" name="email" value="Your Email"></p>
+
+		<p>Comments:<br>
+		<textarea cols="25" rows="6" onfocus="this.value=''">
+			Your Comment
+		</textarea></p>
+
+		<p>Pick your favorite technology:<br>
+			<input type="radio" name="favorite" value="html">HTML
+			<input type="radio" name="favorite" value="css">CSS
+			<input type="radio" name="favorite" value="js">JavaScript
+			<br><br>
+			<input type="submit" name="submit" value="送出資料">
+		</p>
+	</form>
+
+</body>
+</html>
