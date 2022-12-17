@@ -1,68 +1,29 @@
 <!DOCTYPE html>
-<!--
-	NOTES:
-	1. All tokens are represented by '$' sign in the template.
-	2. You can write your code only wherever mentioned.
-	3. All occurrences of existing tokens will be replaced by their appropriate values.
-	4. Blank lines will be removed automatically.
-	5. Remove unnecessary comments before creating your template.
--->
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>Snowing4</title>
-<!-- write your code here -->
-<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="Snowing4.js?1670904760552"></script>
-<script>
-var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
-function init() {
-	canvas = document.getElementById("canvas");
-	anim_container = document.getElementById("animation_container");
-	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("57BF2A82D93840178076BA767F8C3343");
-	var lib=comp.getLibrary();
-	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
-	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
-	var lib=comp.getLibrary();
-	loader.loadManifest(lib.properties.manifest);
-}
-function handleFileLoad(evt, comp) {
-	var images=comp.getImages();	
-	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
-}
-function handleComplete(evt,comp) {
-	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-	var lib=comp.getLibrary();
-	var ss=comp.getSpriteSheet();
-	var queue = evt.target;
-	var ssMetadata = lib.ssMetadata;
-	for(i=0; i<ssMetadata.length; i++) {
-		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
-	}
-	exportRoot = new lib.Snowing4();
-	stage = new lib.Stage(canvas);	
-	//Registers the "tick" event listener.
-	fnStartAnimation = function() {
-		stage.addChild(exportRoot);
-		createjs.Ticker.framerate = lib.properties.fps;
-		createjs.Ticker.addEventListener("tick", stage);
-	}	    
-	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
-	AdobeAn.compositionLoaded(lib.properties.id);
-	fnStartAnimation();
-}
-</script>
-<!-- write your code here -->
+	<meta charset="utf-8">
+	<title>HTML5 &#60;aside&#62; &#38; &#60;figure&#62; 應用</title>
+	<script>
+		function HighlightWetland() {
+			document.getElementById("Some Place").innerHTML = "<h3>Wetland Park</h3><h4>Northern part of Tin Shui Wai, New Territories, Hong Kong</h4>The Hong Kong Wetland Park comprises a 10,000m2 visitor centre and a 60-hectare Wetland Reserve. The Visitor Centre has themed exhibition galleries, theatre, souvenir shop and indoor play area. The themed exhibition galleries showcase the importance of wetland on biodiversity, civilisation and conservation.<figure><img src='https://tickikids.ams3.cdn.digitaloceanspaces.com/z3.cache/gallery/activities/3471/image_62cebfe5eb3d15.93660863.jpg' alt='Wetland Park' style='width:80%'><figcaption>Figure 1: Wetland Park.</figcaption></figure>"
+		}
+
+		function HighlightOceanPark() {
+			document.getElementById("Some Place").innerHTML = "<h3>Ocean Park</h3><h4>Ocean Park Road, Aberdeen, Hong Kong Island.</h4>Ocean Park opened in 1977 and was Hong Kong's first theme park. The park, which occupies an area of over 87 hectares combines attractions, entertainment, conservation and eduction.<figure><img src='https://www.hongkongextras.com/resources/Ocean-Park---40-years.jpg' alt='Ocean Park' style='width:80%'><figcaption>Figure 1: Ocean Park.</figcaption></figure>"
+		}		
+	</script>
 </head>
-<body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:960px; height:540px">
-		<canvas id="canvas" width="960" height="540" style="position: absolute; display: block; background-color:rgba(0, 0, 0, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:960px; height:540px; position: absolute; left: 0px; top: 0px; display: block;">
-		</div>
-	</div>
+
+<body>
+	<h1>The aside & figure elements</h1>
+	<p>My family and I visited some place this summer.</p>
+	<nav>
+		<a href="#" onmouseenter="HighlightWetland()">Wetland Park</a> |
+		<a href="#" onmouseenter="HighlightOceanPark()">Ocean Park</a>
+	</nav>
+	<aside>
+		<p id="Some Place"></p>
+	</aside>
+
 </body>
 </html>
