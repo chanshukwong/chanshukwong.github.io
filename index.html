@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Learning</title>
-	<link rel="stylesheet" type="text/css" href="MyStyleSheet.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script>
 		function f14122022() {
 			document.getElementById("directory").innerHTML="<iframe src='14122022/index.html' width='90%' height='600px'></iframe>";
@@ -16,31 +16,48 @@
 		}
 	</script>
 </head>
-<body id="container">
-	<header id="header"><h1>Welcome to our big family</h1></header>
+<body>
+	<header id="header">
+		<div class="container">
+			<h1>Welcome to my Website</h1>
+		</div>
+	</header>
 
 	<nav id="nav">
-		<a href="#html">HTML</a> |
-		<a href="#css">CSS</a> |
-		<a href="#js">JavaScript</a> |
-		<a href="#jquery">JQuery</a>
+		<div class="container">
+			<ul>
+				<li><a href="#html">HTML</a></li>
+				<li><a href="#css">CSS</a></li>
+				<li><a href="#js">JavaScript</a></li>
+				<li><a href="#jquery">JQuery</a></li>
+			</ul>
+		<div>
 	</nav>
 
-	<aside id="aside">
-		<a href="#" onclick="f14122022()">14122022</a><br>
-		<a href="#" onclick="f15122022()">15122022</a><br>
-		<a href="#" onclick="f16122022()">16122022</a>
-	</aside>
-
-	<section id="section">
-		<p id="directory">
-			<!-- Empty space -->
-		</p>
+	<section id="showcase">
+		<div class="container">
+			<h1>Merry Christmas & Happy New Year</h1>			
+		<div>
 	</section>
 
+	<div class="container">
+		<aside id="aside">
+			<ul>
+				<li><a href="#" onclick="f14122022()">14122022</a></li>
+				<li><a href="#" onclick="f15122022()">15122022</a></li>
+				<li><a href="#" onclick="f16122022()">16122022</a></li>
+			</ul>
+		</aside>
+
+		<section id="main">
+			<p id="directory">Directory
+				<!-- Empty space -->
+			</p>
+		</section>
+	</div>
 
 	<footer id="footer">
-		This is basic structure of HTML5
+		<p>Basic structure of web page</p>
 	</footer>
 
 </body>
