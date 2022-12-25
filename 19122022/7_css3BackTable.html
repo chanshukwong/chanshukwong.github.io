@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Back Table</title>
+	<style>
+		.heading {
+			color:white;
+			background-color: orange;
+		}
+		.odd {
+			color: brown;
+			background-color: #ffffdd;
+		}
+		.even {
+			color: brown;
+			background-color: #ffff99;
+		}
+		#tformat {
+			width: 50%;
+		}
+
+		tr:nth-child(even) {
+			background-color: #D6EEEE;
+		}
+		tr:hover {
+			background-color: #D6EEEE;
+		}	
+
+	</style>
+</head>
+<body>
+	<table id="tformat">
+		<tr class="heading">
+			<th>Song</th>
+			<th>Singer</th>
+		</tr>
+		<tr class="even">
+			<td>Missing You</td>
+			<td>G-Dragon</td>
+		</tr>
+		<tr class="odd">
+			<td>Dream</td>
+			<td>DK</td>
+		</tr>
+		<tr class="even">
+			<td>Oh, Santa!</td>
+			<td>Mariah Carey</td>
+		</tr>
+		<tr class="odd">
+			<td>Last Christmas</td>
+			<td>Wham</td>
+		</tr>
+	</table>
+	<br>
+	<table id="tformat">
+		<tr class="heading">
+			<th>Song</th>
+			<th>Singer</th>
+		</tr>
+		<tr>
+			<td>Missing You</td>
+			<td>G-Dragon</td>
+		</tr>
+		<tr>
+			<td>Dream</td>
+			<td>DK</td>
+		</tr>
+		<tr">
+			<td>Oh, Santa!</td>
+			<td>Mariah Carey</td>
+		</tr>
+		<tr>
+			<td>Last Christmas</td>
+			<td>Wham</td>
+		</tr>
+	</table>
+
+</body>
+</html>

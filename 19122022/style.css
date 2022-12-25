@@ -1,0 +1,29 @@
+
+/* p.78 */
+p.p78 {
+	color: purple;
+	width:300px;
+	border: 2px solid black;
+}
+
+/* p.79 */
+div p, li, h1 {
+	color:red;
+}
+
+/* p.80 */
+h1.p80 {
+	color:white;
+	background-color: olive;
+	text-align: center;
+	width:300px;
+}
+
+body {
+	background-color: lightblue;
+}
+
+h1.p81 {
+	color:navy;
+	margin-left:20px;
+}
